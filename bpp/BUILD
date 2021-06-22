@@ -1,12 +1,12 @@
-load("@rules_foreign_cc//tools/build_defs:cmake.bzl", "cmake_external")
+load("@rules_foreign_cc//foreign_cc:defs.bzl", "cmake")
 
-cmake_external(
+cmake(
 	name = "bpp_core_lib",
 	lib_name = "libbpp-core",
 	lib_source = "@bpp_core//:all",
 )
 
-cmake_external(
+cmake(
     name = "bpp_seq_lib",
     lib_name = "libbpp-seq",
     lib_source = "@bpp_seq//:all",
